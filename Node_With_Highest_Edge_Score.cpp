@@ -26,3 +26,28 @@ public:
 
     }
 };
+
+/*      //Using the method of indgree
+class Solution {
+public:
+    int edgeScore(vector<int>& edges) {
+        
+        int n = edges.size();
+        vector<long long> v(n, 0);      //stores the edge scores
+        for(int i = 0; i<n; i++){
+            v[edges[i]] = v[edges[i]] + i;
+        }
+        
+        long long int maxi = INT_MIN;
+        for(int j = 0; j<n; j++){
+            maxi = max(maxi, v[j]);
+        }
+        
+        int c=0;
+        for(int i=0; i<v.size(); i++){
+            if(v[i]==maxi){c=i;break;}
+        }
+        return c;
+    }
+};
+*/
